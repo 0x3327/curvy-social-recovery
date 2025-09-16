@@ -5,6 +5,7 @@ import (
 	SECP256K1_fr "github.com/consensys/gnark-crypto/ecc/secp256k1/fr"
 )
 
+// Split returns the Share slice of nOfShares elements generated for the provided keypair and error, if any.
 func Split(threshold, nOfShares int, spendingKey, viewingKey string) ([]Share, error) {
 
 	if threshold > nOfShares {

@@ -7,6 +7,9 @@ import (
 	SECP256K1_fr "github.com/consensys/gnark-crypto/ecc/secp256k1/fr"
 )
 
+// Recover returns the recovered spending key, viewing key and error encountered, if any.
+//
+// Keys returned are hex strings without the leading 0x
 func Recover(threshold int, shares []Share) (string, string, error) {
 
 	// Check if the number of shares is less than the threshold
